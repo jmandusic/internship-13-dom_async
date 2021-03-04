@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internship-13-dom_async</title>
+    <link rel="stylesheet" href="styles/common.css" />
+  </head>
+  <body onload="setFormDisplay()">
+    <section class="form-section">
+      <form
+        class="form-registration"
+        action="javascript:void(0)"
+        onsubmit="formRegistrationSubmit(this)"
+      >
+        <h2 class="form-header">REGISTRATION</h2>
+        <div class="form-field">
+          <label class="form-label">Username</label>
+          <input
+            type="text"
+            name="user-name"
+            required
+            minlength="5"
+            maxlength="10"
+            class="form-input"
+            placeholder="Username"
+          />
+        </div>
+        <div class="form-field">
+          <label class="form-label">Password</label>
+          <input
+            type="password"
+            name="password"
+            required
+            minlength="5"
+            maxlength="15"
+            class="form-password"
+            placeholder="Password"
+          />
+        </div>
+        <div class="form-field">
+          <label class="form-label">Repeat password</label>
+          <input
+            type="password"
+            name="password-repeated"
+            required
+            minlength="5"
+            maxlength="15"
+            class="form-password form-password--repeated"
+            placeholder="Repeat password"
+          />
+        </div>
+        <button class="form-button" type="submit">SUBMIT</button>
+      </form>
+
+      <form
+        class="form-login"
+        action="javascript:void(0)"
+        onsubmit="formLoginSubmit(this)"
+      >
+        <h2 class="form-header">LOGIN</h2>
+        <div class="form-field">
+          <label class="form-label">Username</label>
+          <input
+            type="text"
+            name="user-name"
+            required
+            minlength="5"
+            maxlength="10"
+            class="form-input"
+            placeholder="Username"
+          />
+        </div>
+        <div class="form-field">
+          <label class="form-label">Password</label>
+          <input
+            type="password"
+            name="password"
+            required
+            class="form-password"
+            placeholder="Password"
+          />
+        </div>
+        <button class="form-button" type="submit">SUBMIT</button>
+      </form>
+    </section>
+
+    <section class="jokes-section">
+      <h1>JOKES</h1>
+    </section>
+    
+    <script src="scripts/Helpers/helpFunctions.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

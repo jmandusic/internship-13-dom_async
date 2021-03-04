@@ -1,0 +1,10 @@
+@import "form.css";
+@import "jokes.css";
+
+body {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  height: 100vw;
+  background-image: url(../assets/Varying-Stripes.svg);
+}

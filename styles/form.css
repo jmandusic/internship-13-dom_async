@@ -1,0 +1,28 @@
+.form-section {
+  width: 50%;
+}
+
+.form-registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px 20px 20px;
+  border-radius: 20px;
+  background-color: whitesmoke;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-login {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px 20px 20px;
+  border-radius: 20px;
+  background-color: whitesmoke;
+}
