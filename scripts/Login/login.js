@@ -1,8 +1,8 @@
 "use strict";
 
 function setFormDisplay() {
-  const registrationForm = document.querySelector(".form-registration");
-  const loginForm = document.querySelector(".form-login");
+  const registrationForm = document.querySelector(".form__registration");
+  const loginForm = document.querySelector(".form__login");
 
   const userName = localStorage.getItem("user-name");
   const password = localStorage.getItem("password");
@@ -22,7 +22,7 @@ function formRegistrationSubmit(form) {
   if (passwordRepeated === password) {
     localStorage.setItem("user-name", userName);
     localStorage.setItem("password", password);
-    displayJokes();
+    location.href = "pages/jokes.html";
   } else {
     alert("Wrong input");
   }
@@ -36,7 +36,7 @@ function formLoginSubmit(form) {
   const passwordAtStorage = localStorage.getItem("password");
 
   if (userName === userNameAtStorage && password === passwordAtStorage) {
-    displayJokes();
+    location.href = "pages/jokes.html";
   } else {
     alert("Wrong input");
   }

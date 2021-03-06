@@ -5,92 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Internship-13-dom_async</title>
-    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/form.css" />
   </head>
   <body onload="setFormDisplay()">
-    <section class="form-section">
+    <section class="section__form">
       <form
-        class="form-registration"
+        class="form__registration"
         action="javascript:void(0)"
         onsubmit="formRegistrationSubmit(this)"
       >
-        <h2 class="form-header">REGISTRATION</h2>
-        <div class="form-field">
-          <label class="form-label">Username</label>
+        <h2 class="form__header">REGISTRATION</h2>
+        <div class="form__field">
+          <label class="form__label">Username</label>
           <input
             type="text"
             name="user-name"
             required
             minlength="5"
             maxlength="10"
-            class="form-input"
+            class="form__input"
             placeholder="Username"
           />
         </div>
-        <div class="form-field">
-          <label class="form-label">Password</label>
+        <div class="form__field">
+          <label class="form__label">Password</label>
           <input
             type="password"
             name="password"
             required
             minlength="5"
             maxlength="15"
-            class="form-password"
+            class="form__password"
             placeholder="Password"
           />
         </div>
-        <div class="form-field">
-          <label class="form-label">Repeat password</label>
+        <div class="form__field">
+          <label class="form__label">Repeat password</label>
           <input
             type="password"
             name="password-repeated"
             required
             minlength="5"
             maxlength="15"
-            class="form-password form-password--repeated"
+            class="form__password form__password--repeated"
             placeholder="Repeat password"
           />
         </div>
-        <button class="form-button" type="submit">SUBMIT</button>
+        <a href="pages/jokes.html" class="form__button-container">
+          <button class="form__button form__button--registration" type="submit">SUBMIT</button>
+        </a>
       </form>
 
       <form
-        class="form-login"
+        class="form__login"
         action="javascript:void(0)"
         onsubmit="formLoginSubmit(this)"
       >
-        <h2 class="form-header">LOGIN</h2>
-        <div class="form-field">
-          <label class="form-label">Username</label>
+        <h2 class="form__header">LOGIN</h2>
+        <div class="form__field">
+          <label class="form__label">Username</label>
           <input
             type="text"
             name="user-name"
             required
-            minlength="5"
-            maxlength="10"
-            class="form-input"
+            class="form__input"
             placeholder="Username"
           />
         </div>
-        <div class="form-field">
-          <label class="form-label">Password</label>
+        <div class="form__field">
+          <label class="form__label">Password</label>
           <input
             type="password"
             name="password"
             required
-            class="form-password"
+            class="form__password"
             placeholder="Password"
           />
         </div>
-        <button class="form-button" type="submit">SUBMIT</button>
+        <a class="form__button-container">
+          <button type="submit" class="form__button form__button--login">SUBMIT</button>
+        </a>
       </form>
     </section>
 
-    <section class="jokes-section">
-      <h1>JOKES</h1>
-    </section>
-    
     <script src="scripts/Helpers/helpFunctions.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/Login/login.js"></script>
   </body>
 </html>

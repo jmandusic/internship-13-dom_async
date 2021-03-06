@@ -1,11 +1,11 @@
 "use strict";
 
-function displayJokes() {
-  const formSection = document.querySelector(".form-section");
-  const jokesSection = document.querySelector(".jokes-section");
-  const body = document.querySelector("body");
-
-  formSection.style.display = "none";
-  jokesSection.style.display = "flex";
-  body.style.backgroundImage = "url('assets/Repeating-Triangles.svg')";
+function autoIncrement(objectArray) {
+  let newId = 0;
+  objectArray.forEach(object => {
+    if (object.id > newId) {
+      newId = object.id;
+    }
+  });
+  return newId + 1;
 }

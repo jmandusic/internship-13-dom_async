@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jokes</title>
+    <link rel="stylesheet" href="../styles/jokes.css" />
+  </head>
+  <body onload="newJoke(), reviewJokes()">
+    <button class="log-out__button">LOG OUT</button>
+    <section class="section__jokes">
+      <h1 class="jokes__header">Jokes</h1>
+      <div class="get-review-jokes-container">
+        <button class="get-joke__button" onclick="getJokeClickHandler()">
+          GET JOKE
+        </button>
+        <button
+          class="review-jokes__button"
+          onclick="reviewJokesClickHandler(), reviewJokes()"
+        >
+          REVIEW JOKES
+        </button>
+      </div>
+
+      <div class="get-joke-container">
+        <div class="joke-display">
+          <p class="joke-text"></p>
+        </div>
+        <div class="skip-save-jokes-container">
+          <button class="skip-joke__button" onclick="newJoke()">
+            SKIP JOKE
+          </button>
+          <button class="save-joke__button" onclick="saveJoke()">
+            SAVE JOKE
+          </button>
+        </div>
+        <form class="joke-rating-container" onsubmit="submitJokeRating(this)">
+          <label class="joke-rating__text">Rate the joke</label>
+          <input type="number" name="joke-rating" min="1" max="10" />
+          <button type="submit">SUBMIT</button>
+        </form>
+      </div>
+
+      <div class="review-jokes-container">
+        <div class="joke-informations">
+          <p class="joke__id"></p>
+          <p class="joke__text"></p>
+          <p class="joke__rating"></p>
+        </div>
+        <button class="delete__button">DELETE</button>
+        <div class="previous-next-joke__button">
+          <button class="previous__button">&larr; PREVIOUS</button>
+          <button class="next__button">NEXT &rarr;</button>
+        </div>
+        <div class="action-confirmation-modal">
+          <div class="modal__header">
+            <h4 class="modal__title">Confirmation</h4>
+            <span class="close__button">&times;</span>
+          </div>
+          <div class="modal__text-wrapper">
+            <div class="modal__text">
+              <p>Are you sure you want to delete this item?</p>
+            </div>
+          </div>
+          <div class="modal__footer">
+            <button class="modal__button modal__button--close">CLOSE</button>
+            <button class="modal__button modal__button--delete">DELETE</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../scripts/Data/data.js"></script>
+    <script src="../scripts/Helpers/helpFunctions.js"></script>
+    <script src="../scripts/Jokes/events.js"></script>
+    <script src="../scripts/Jokes/fetch.js"></script>
+    <script src="../scripts/Jokes/jokes.js"></script>
+    <script src="../scripts/Jokes/reviewJokes.js"></script>
+  </body>
+</html>
