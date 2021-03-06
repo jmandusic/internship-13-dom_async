@@ -8,8 +8,9 @@ function reviewJokes() {
   const jokeText = document.querySelector(".joke__text");
 
   const deleteButton = document.querySelector(".delete__button");
-  const previousNextButtons = document.querySelector(".previous-next-joke__button");
-
+  const previousNextButtons = document.querySelector(
+    ".previous-next-joke__button"
+  );
 
   if (jokesArray) {
     const joke = jokesArray[currentIndexAtJokesReview.index];

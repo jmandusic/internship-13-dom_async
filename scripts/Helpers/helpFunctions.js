@@ -15,5 +15,3 @@ function sortJokesArray(jokes) {
     return secondJoke.rating - firstJoke.rating;
   });
 }
-
-

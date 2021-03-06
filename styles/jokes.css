@@ -54,17 +54,14 @@ button:focus {
   max-width: 300px;
 }
 
-.get-review-jokes-container button {
+.get-joke__button,
+.review-jokes__button {
   flex-basis: 50%;
   margin-left: 10px;
   margin-right: 10px;
   height: 30px;
   border-radius: 7px;
   font-weight: bolder;
-}
-
-.get-joke__button,
-.review-jokes__button {
   border: 2px solid #1b3c44;
   background-color: #1b3c44;
   color: #ffcc00;
@@ -101,7 +98,7 @@ button:focus {
 }
 
 .skip-joke__button:hover,
-.save-joke__button:hover{
+.save-joke__button:hover {
   border-color: #5ec4bc;
   background-color: #5ec4bc;
 }
@@ -263,4 +260,3 @@ button:focus {
   margin-right: 30px;
   background-color: #df3445;
 }
-
