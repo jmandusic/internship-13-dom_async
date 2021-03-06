@@ -4,9 +4,17 @@ body {
   flex-direction: column;
   margin: 0;
   height: 100vw;
-  background-color: #f1f3f6;
+  background-color: #f4f4f2;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 0;
 }
 
 .log-out__button {
@@ -19,6 +27,13 @@ body {
   border: 2px solid #1b3c44;
   border-radius: 20px;
   color: #5ec4bc;
+  font-weight: bolder;
+}
+
+.log-out__button:hover {
+  border-color: #5ec4bc;
+  background-color: #5ec4bc;
+  color: #1b3c44;
 }
 
 .jokes__header {
@@ -29,19 +44,40 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 10vh;
 }
 
 .get-review-jokes-container {
   z-index: 0;
   display: flex;
-  flex-direction: row;
   width: 80%;
+  max-width: 300px;
 }
 
 .get-review-jokes-container button {
   flex-basis: 50%;
   margin-left: 10px;
   margin-right: 10px;
+  height: 30px;
+  border-radius: 7px;
+  font-weight: bolder;
+}
+
+.get-joke__button,
+.review-jokes__button {
+  border: 2px solid #1b3c44;
+  background-color: #1b3c44;
+  color: #ffcc00;
+}
+
+.get-joke__button:hover {
+  border-color: #ffcc00;
+  background-color: #ffcc00;
+  color: #1b3c44;
+}
+
+.review-jokes__button:hover {
+  color: #f4f4f2;
 }
 
 .get-joke-container {
@@ -50,17 +86,59 @@ body {
   align-items: center;
 }
 
-.joke-display {
-  display: flex;
+.joke-text {
+  text-align: center;
 }
 
-.skip-save-jokes-container {
-  display: flex;
-  flex-direction: row;
+.skip-joke__button,
+.save-joke__button {
+  height: 30px;
+  border: 2px solid #ffcc00;
+  border-radius: 7px;
+  background-color: #ffcc00;
+  color: #1b3c44;
+  font-weight: bolder;
+}
+
+.skip-joke__button:hover,
+.save-joke__button:hover{
+  border-color: #5ec4bc;
+  background-color: #5ec4bc;
 }
 
 .joke-rating-container {
   display: none;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.joke-rating__text {
+  font-weight: bold;
+}
+
+.joke-rating__input {
+  margin: 10px;
+  height: 30px;
+  border: 2px solid #1b3c44;
+  border-radius: 7px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.joke-rating__input:focus {
+  outline: 0;
+}
+
+.submit__button {
+  height: 30px;
+  border: 2px solid #2b3d46;
+  border-radius: 7px;
+  background-color: #2b3d46;
+  color: #f4f4f2;
+}
+
+.submit__button:hover {
+  color: #df3445;
 }
 
 .review-jokes-container {
@@ -82,26 +160,44 @@ body {
   text-align: center;
 }
 
-.previous-next-joke__button {
-  display: flex;
-  flex-direction: row;
-  width: 80%;
-  max-width: 250px;
+.delete__button {
+  margin-bottom: 20px;
+  height: 30px;
+  background-color: #df3445;
+  color: white;
+  border: 2px solid #f1f3f6;
+  border-radius: 10px;
 }
 
-.previous-next-joke__button button {
-  flex-basis: 50%;
+.previous__button,
+.next__button {
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 35px;
+  width: 50px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: black;
+  color: #f4f4f2;
+  font-weight: bolder;
+}
+
+.previous__button:hover,
+.next__button:hover {
+  background-color: #f4f4f2;
+  color: black;
 }
 
 .action-confirmation-modal {
   position: absolute;
   z-index: 2;
-  top: -50px;
+  top: -30px;
   display: none;
   flex-direction: column;
   align-items: center;
   width: 80%;
   max-width: 600px;
+  min-width: 280px;
   background-color: #fefefe;
 }
 
@@ -129,7 +225,6 @@ body {
 .close__button:hover {
   color: black;
   text-decoration: none;
-  cursor: pointer;
 }
 
 .modal__text-wrapper {
@@ -158,7 +253,6 @@ body {
   color: white;
   border: 2px solid #fefefe;
   border-radius: 5px;
-  cursor: pointer;
 }
 
 .modal__button--close {
@@ -169,3 +263,4 @@ body {
   margin-right: 30px;
   background-color: #df3445;
 }
+

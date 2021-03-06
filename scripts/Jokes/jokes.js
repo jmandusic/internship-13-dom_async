@@ -32,7 +32,6 @@ function submitJokeRating(joke) {
   if (!jokesArray) {
     jokesArray = [];
   }
-  console.log();
 
   const jokeId = autoIncrement(jokesArray);
   const jokeText = document.querySelector(".joke-text").innerHTML;
@@ -45,7 +44,17 @@ function submitJokeRating(joke) {
   };
 
   jokesArray.push(jokeObject);
+  sortJokesArray(jokesArray);
   localStorage.setItem("jokes-array", JSON.stringify(jokesArray));
 
   alert("Joke sucessfully saved !!!");
+  newJoke();
+
+  const deleteButton = document.querySelector(".delete__button");
+  const previousNextButtons = document.querySelector(
+    ".previous-next-joke__button"
+  );
+
+  deleteButton.style.display = "none";
+  previousNextButtons.style.display = "none";
 }

@@ -10,6 +10,9 @@ function newJoke() {
     },
   })
     .then((res) => res.json())
-    .then((data) => jokeText.innerHTML = data.joke)
+    .then((data) => (jokeText.innerHTML = data.joke))
     .catch((err) => console.log(err));
+
+  const jokeRatingContainer = document.querySelector(".joke-rating-container");
+  jokeRatingContainer.style.display = "none";
 }
