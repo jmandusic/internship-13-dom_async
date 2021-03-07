@@ -10,6 +10,11 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+input,
+button {
+  outline: 0;
+}
+
 .section__form {
   margin-top: 150px;
   width: 80%;

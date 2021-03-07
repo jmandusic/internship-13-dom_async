@@ -12,7 +12,7 @@ function reviewJokes() {
     ".previous-next-joke__button"
   );
 
-  if (jokesArray) {
+  if (jokesArray && jokesArray.length !== 0) {
     const joke = jokesArray[currentIndexAtJokesReview.index];
     jokeId.innerHTML = "Id: " + joke.id;
     jokeText.innerHTML = "Joke: " + joke.text;

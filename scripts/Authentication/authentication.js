@@ -24,7 +24,7 @@ function formRegistrationSubmit(form) {
     localStorage.setItem("password", password);
     location.href = "pages/jokes.html";
   } else {
-    alert("Wrong input");
+    alert("Passwords not matching");
   }
 }
 
@@ -38,6 +38,6 @@ function formLoginSubmit(form) {
   if (userName === userNameAtStorage && password === passwordAtStorage) {
     location.href = "pages/jokes.html";
   } else {
-    alert("Wrong input");
+    alert("Wrong username or password");
   }
 }

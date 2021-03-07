@@ -196,6 +196,7 @@ button:focus {
   max-width: 600px;
   min-width: 280px;
   background-color: #fefefe;
+  border-radius: 15px;
 }
 
 .modal__header {
@@ -220,8 +221,10 @@ button:focus {
 }
 
 .close__button:hover {
+  transform: scale(1.2);
   color: black;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .modal__text-wrapper {
@@ -259,4 +262,8 @@ button:focus {
 .modal__button--delete {
   margin-right: 30px;
   background-color: #df3445;
+}
+
+.modal__button:hover {
+  transform: scale(1.2);
 }

@@ -102,6 +102,10 @@ deleteButtonModal.addEventListener("click", () => {
   const jokeId = document.querySelector(".joke__id");
   const jokeText = document.querySelector(".joke__text");
   const jokeRating = document.querySelector(".joke__rating");
+  const deleteButton = document.querySelector(".delete__button");
+  const previousNextButtons = document.querySelector(
+    ".previous-next-joke__button"
+  );
 
   jokesArray.splice(currentIndexAtJokesReview.index, 1);
   localStorage.setItem("jokes-array", JSON.stringify(jokesArray));
@@ -114,9 +118,18 @@ deleteButtonModal.addEventListener("click", () => {
     currentIndexAtJokesReview.index -= 1;
   }
 
-  jokeId.innerHTML = "Id: " + joke.id;
-  jokeText.innerHTML = "Joke: " + joke.text;
-  jokeRating.innerHTML = "Rating: " + joke.rating;
+  if (currentIndexAtJokesReview.index === -1) {
+    currentIndexAtJokesReview.index = 0;
+    jokeId.innerHTML = "";
+    jokeText.innerHTML = "No stored jokes";
+    jokeRating.innerHTML = "";
+    deleteButton.style.display = "none";
+    previousNextButtons.style.display = "none";
+  } else {
+    jokeId.innerHTML = "Id: " + joke.id;
+    jokeText.innerHTML = "Joke: " + joke.text;
+    jokeRating.innerHTML = "Rating: " + joke.rating;
+  }
 
   actionConfirmationModal.style.display = "none";
   body.style.backgroundColor = "#f1f3f6";
